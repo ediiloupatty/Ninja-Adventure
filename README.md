@@ -1,8 +1,8 @@
-# 🥷 Ninja Adventure
+# Ninja Adventure
 
 **Ninja Adventure** adalah game 2D Platformer yang dikembangkan menggunakan **Godot Engine 4**. Dalam game ini, Anda mengendalikan seorang ninja yang harus berpetualang melewati level dengan berlari, melompat, mengumpulkan item, dan mengalahkan musuh.
 
-## 🌟 Fitur Permainan
+## Fitur Permainan
 
 - **Pergerakan Karakter Utama**: Ninja dapat berjalan ke kiri maupun ke kanan, serta melompat. Animasi dinamis mengikuti status pemain (diam, berlari, atau melompat di udara).
 - **Sistem Nyawa (Health System)**: Pemain dibekali 3 nyawa (Health) yang ditandai dengan ikon hati. Jika tersentuh musuh secara tidak tepat, nyawa akan berkurang. Apabila nyawa habis (0), permainan akan dikembalikan ke Main Menu.
@@ -11,7 +11,7 @@
 - **Multilevel**: Proyek ini diatur ke dalam beberapa desain level (`level1`, `level2`, dll) dengan pintu akhir (`finish`) di penghujung area.
 - **Lingkungan Parallax**: Beberapa level mendukung *Parallax Background* bertema hutan pinus (*Pine Forest Parallax*) untuk menghadirkan kesan artistik dan memberikan efek *depth*.
 
-## 🎮 Kontrol Permainan
+## Kontrol Permainan
 
 | Aksi | Keyboard |
 | :--- | :--- |
@@ -20,7 +20,7 @@
 | **Melompat** | `Spasi` (Spacebar) |
 | **Jeda Game (Pause)**| `ESC` (Escape) |
 
-## 📂 Struktur Utama Proyek
+## Struktur Utama Proyek
 
 * `assets/` - Memuat file referensi lainnya.
 * `img/` - Semua aset gambar berukuran 2D, termasuk *spritesheet*, gambar lingkungan, *background parallax*, jamur (Mushroom), musuh, dan ninja utama.
@@ -29,7 +29,7 @@
 * `scenes/menu/` - Antarmuka *Main Menu* dari game sebelum transisi permainan dimulai.
 * `game_manager.gd` - Komponen sangat penting dan bisa dianggap *Autoload/Node Master*. Mengontrol kondisi universal seperti jumlah Poin yang dikumpulkan, jumlah Nyawa tersisa, merapikan antarmuka antrean hati, maupun mengelola status kalah menang.
 
-## 🚀 Cara Import dan Bermain
+## Cara Import dan Bermain
 
 1. Unduh dan sediakan **Godot Engine versi 4.x** di PC/Laptop Anda.
 2. Buka Godot, lalu klik pada tombol **Import**.
@@ -39,4 +39,4 @@
 6. Anda bisa membuka dan mengedit parameter level dalam _scenes > levels_.
 
 ---
-*Dikembangkan dengan menggunakan Godot Engine.* 💙
+*Dikembangkan dengan menggunakan Godot Engine.* 
