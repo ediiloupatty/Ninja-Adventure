@@ -21,11 +21,21 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 [autoload]
 
 AudioManagerGlobal="*uid://bm0mp1a6di40l"
+GdssRuntime="*uid://yu6lhnx763yp"
 
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gdss/plugin.cfg")
+
+[gdss]
+
+internal/initialized=true
+editor/use_minimap=true
 
 [input]
 

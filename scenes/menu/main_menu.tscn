@@ -1,66 +1,70 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxia1xq1ii8yi"]
+[gd_scene format=3 uid="uid://cxia1xq1ii8yi"]
 
 [ext_resource type="Script" uid="uid://d171whmumt4wq" path="res://scenes/menu/main_menu.gd" id="1_p2v7a"]
-[ext_resource type="Texture2D" uid="uid://ci26goipasbf1" path="res://assets/menu/Brown.png" id="2_5jvgf"]
-[ext_resource type="Texture2D" uid="uid://y8pnmb6o255f" path="res://assets/game_elements/cooltext469548646162468.png" id="3_g6bsq"]
+[ext_resource type="Texture2D" uid="uid://bgsbl4u7h44fi" path="res://img/MainMenu/Background.png" id="2_247la"]
+[ext_resource type="Texture2D" uid="uid://dkgupaq7a8d84" path="res://img/MainMenu/title.png" id="3_kiqgm"]
+[ext_resource type="Texture2D" uid="uid://c24iv20gbfikh" path="res://img/MainMenu/play.png" id="4_kiqgm"]
+[ext_resource type="Texture2D" uid="uid://ck1u6lvxepal6" path="res://img/MainMenu/Pengaturan.png" id="5_hj162"]
 
-[node name="MainMenu" type="Node"]
+[node name="MainMenu" type="Node" unique_id=6739849]
 script = ExtResource("1_p2v7a")
 
-[node name="TextureRect2" type="TextureRect" parent="."]
-texture_filter = 1
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=944813017]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_5jvgf")
-stretch_mode = 1
-
-[node name="TextureRect" type="TextureRect" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -523.0
-offset_top = -95.0
-offset_right = 523.0
-offset_bottom = -2.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_g6bsq")
+scale = Vector2(1.0021658, 1)
+texture = ExtResource("2_247la")
 expand_mode = 2
+stretch_mode = 6
 
-[node name="Level1" type="Button" parent="."]
-anchors_preset = 8
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1628126435]
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -335.0
-offset_top = 86.0
-offset_right = -139.0
-offset_bottom = 149.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 30
-text = "Level 1"
-
-[node name="Level2" type="Button" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 148.0
-offset_top = 83.0
+offset_left = -344.0
 offset_right = 344.0
-offset_bottom = 146.0
+offset_bottom = 336.0
+grow_horizontal = 2
+texture = ExtResource("3_kiqgm")
+expand_mode = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1013387723]
+custom_minimum_size = Vector2(350, 120)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -94.0
+offset_right = 175.0
+offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 30
-text = "Level 2"
+scale = Vector2(1.016, 1.0060676)
 
-[connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
-[connection signal="pressed" from="Level2" to="." method="_on_level_2_pressed"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=2142691173]
+custom_minimum_size = Vector2(350, 120)
+layout_mode = 2
+
+[node name="Main" type="TextureButton" parent="CenterContainer/VBoxContainer" unique_id=176892370]
+custom_minimum_size = Vector2(350, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+action_mode = 0
+texture_normal = ExtResource("4_kiqgm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Pengaturan" type="TextureButton" parent="CenterContainer/VBoxContainer" unique_id=187165139]
+custom_minimum_size = Vector2(350, 120)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("5_hj162")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Main" to="." method="_on_main_pressed"]
