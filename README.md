@@ -1,5 +1,7 @@
 # Ninja Adventure
 
+![Main Menu Tampilan Awal](img/main_menu.png)
+
 **Ninja Adventure** adalah game 2D Platformer yang dikembangkan menggunakan **Godot Engine 4**. Dalam game ini, Anda mengendalikan seorang ninja yang harus berpetualang melewati level dengan berlari, melompat, mengumpulkan item, dan mengalahkan musuh.
 
 ## Fitur Permainan
