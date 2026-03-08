@@ -18,6 +18,10 @@ config/name="Ninja Adventure"
 run/main_scene="res://scenes/menu/main_menu.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
+[autoload]
+
+AudioManagerGlobal="*uid://bm0mp1a6di40l"
+
 [display]
 
 window/stretch/mode="canvas_items"
