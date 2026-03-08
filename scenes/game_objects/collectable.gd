@@ -6,6 +6,8 @@ extends Area2D
 func _on_body_entered(body: Node2D) -> void:
 	# Cek apakah node yang masuk adalah bagian dari grup "main_character"
 	if body.is_in_group("main_character"):
+		# Untuk audio collected item
+		AudioManagerGlobal.play_item_collected()
 		# Hapus objek ini dari scene untuk menandai pengambilan item
 		queue_free()
 

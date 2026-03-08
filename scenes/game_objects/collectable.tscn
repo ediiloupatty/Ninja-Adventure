@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://lsoa8dv1sfpm"]
+[gd_scene format=3 uid="uid://lsoa8dv1sfpm"]
 
 [ext_resource type="Script" uid="uid://b4tywdgmwr07g" path="res://scenes/game_objects/collectable.gd" id="1_ipipx"]
 [ext_resource type="Texture2D" uid="uid://cjwu5c6l33w6s" path="res://assets/game_elements/Cherries.png" id="1_tncid"]
@@ -133,18 +133,18 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_vdcr8"]
 radius = 22.0227
 
-[node name="collectable" type="Area2D"]
+[node name="collectable" type="Area2D" unique_id=1497496141]
 texture_filter = 1
 script = ExtResource("1_ipipx")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1573291215]
 texture_filter = 1
 position = Vector2(0, 4.76837e-07)
 scale = Vector2(2.5625, 2.10938)
 sprite_frames = SubResource("SpriteFrames_lbwd8")
 autoplay = "default"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1232624188]
 shape = SubResource("CircleShape2D_vdcr8")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

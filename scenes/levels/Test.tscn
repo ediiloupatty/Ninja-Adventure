@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b5f3yh3pqadkr"]
+[gd_scene format=3 uid="uid://b5f3yh3pqadkr"]
 
 [ext_resource type="Script" uid="uid://brmjtsbm2p88t" path="res://game_manager.gd" id="1_v5w14"]
 [ext_resource type="Texture2D" uid="uid://damkxmfupdvys" path="res://assets/background/Green.png" id="2_fvais"]
@@ -186,16 +186,16 @@ sources/0 = SubResource("TileSetAtlasSource_685n3")
 a = Vector2(826, 8)
 b = Vector2(-1716, 12)
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" unique_id=1347064887]
 
-[node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
+[node name="GameManager" type="Node" parent="." unique_id=1452807792 node_paths=PackedStringArray("hearts")]
 unique_name_in_owner = true
 script = ExtResource("1_v5w14")
 hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/HBoxContainer/Heart2"), NodePath("../UI/Hearts/HBoxContainer/Heart3")]
 
-[node name="SceneObjects" type="Node" parent="."]
+[node name="SceneObjects" type="Node" parent="." unique_id=367117742]
 
-[node name="TextureRect" type="TextureRect" parent="SceneObjects"]
+[node name="TextureRect" type="TextureRect" parent="SceneObjects" unique_id=1494070854]
 texture_filter = 1
 offset_left = -3.0
 offset_top = -6.0
@@ -205,61 +205,61 @@ scale = Vector2(0.992287, 1.00377)
 texture = ExtResource("2_fvais")
 stretch_mode = 1
 
-[node name="TileMap" type="TileMap" parent="SceneObjects"]
+[node name="TileMap" type="TileMap" parent="SceneObjects" unique_id=1602650817]
 texture_filter = 1
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_wm0sm")
 format = 2
 layer_0/tile_data = PackedInt32Array(851968, 458752, 0, 851991, 458752, 0, 851969, 458752, 0, 851970, 458752, 0, 851971, 458752, 0, 851972, 458752, 0, 851973, 458752, 0, 851974, 458752, 0, 851975, 458752, 0, 851976, 458752, 0, 851977, 458752, 0, 851980, 458752, 0, 851983, 458752, 0, 851984, 458752, 0, 851985, 458752, 0, 851986, 458752, 0, 851987, 458752, 0, 851988, 458752, 0, 851989, 458752, 0, 851990, 458752, 0, 917503, 458752, 0, 851992, 458752, 0, 851967, 524288, 1, 786431, 524288, 1, 720895, 524288, 1, 655359, 524288, 1, 589823, 524288, 1, 524287, 524288, 1, 458751, 524288, 1, 393215, 524288, 1, 327679, 524288, 1, 262143, 524288, 1, 196607, 524288, 1, 131071, 524288, 1, 65535, 524288, 1, -1, 458752, 1, 851993, 458752, 0, 851998, 458752, 0, 852002, 458752, 0, 852003, 458752, 0, 852004, 458752, 0, 852005, 458752, 0, 852006, 458752, 0, 852007, 458752, 0, 852011, 458752, 0, 852012, 458752, 0, 852013, 458752, 0, 852014, 458752, 0, 852015, 458752, 0, 852016, 458752, 0, 852017, 458752, 0, 852018, 458752, 0, -65511, 458752, 2, -65510, 458752, 2, -65509, 458752, 2, -65508, 458752, 2, -65507, 458752, 2, -65506, 458752, 2, -65505, 458752, 2, -65504, 458752, 2, -65503, 458752, 2, -65502, 458752, 2, -65501, 458752, 2, -65500, 458752, 2, -65499, 458752, 2, -65498, 458752, 2, -65497, 458752, 2, -65496, 458752, 2, -65495, 458752, 2, -65494, 458752, 2, -65493, 458752, 2, -65492, 458752, 2, -65491, 458752, 2, -65490, 458752, 2, -65489, 458752, 2, -65488, 458752, 2, -65487, 458752, 2, -65486, 458752, 2, 51, 393216, 1, 65587, 393216, 1, 131123, 393216, 1, 196659, 393216, 1, 262195, 393216, 1, 327731, 393216, 1, 393267, 393216, 1, 458803, 393216, 1, 524339, 393216, 1, 589875, 393216, 1, 655411, 393216, 1, 720947, 393216, 1, 786483, 393216, 1, -65485, 458752, 1, 852019, 458752, 1, -65536, 458752, 2, -65535, 458752, 2, -65534, 458752, 2, -65533, 458752, 2, -65532, 458752, 2, -65531, 458752, 2, -65530, 458752, 2, -65529, 458752, 2, -65528, 458752, 2, -65527, 458752, 2, -65526, 458752, 2, -65525, 458752, 2, -65524, 458752, 2, -65523, 458752, 2, -65522, 458752, 2, -65521, 458752, 2, -65520, 458752, 2, -65519, 458752, 2, -65518, 458752, 2, -65517, 458752, 2, -65516, 458752, 2, -65515, 458752, 2, -65514, 458752, 2, -65513, 458752, 2, -65512, 458752, 2, 196655, 1114112, 1, 589871, 1114112, 1, 196656, 1245184, 1, 589872, 1245184, 1, 458801, 393216, 0, 524337, 393216, 2, 131122, 393216, 0, 196658, 393216, 2, 458802, 524288, 0, 524338, 458752, 2, 851978, 458752, 0, 851979, 458752, 0, 851997, 393216, 0, 851981, 458752, 0, 851982, 458752, 0, 851994, 458752, 0, 851995, 458752, 0, 851996, 458752, 0)
 
-[node name="CharacterBody2D" parent="SceneObjects" instance=ExtResource("4_qpu7g")]
+[node name="CharacterBody2D" parent="SceneObjects" unique_id=1470586527 instance=ExtResource("4_qpu7g")]
 position = Vector2(270, 504)
 
-[node name="Camera2D" type="Camera2D" parent="SceneObjects/CharacterBody2D"]
+[node name="Camera2D" type="Camera2D" parent="SceneObjects/CharacterBody2D" unique_id=542041413]
 position = Vector2(0, 1)
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0
 
-[node name="Collactable Group" type="Node" parent="SceneObjects"]
+[node name="Collactable Group" type="Node" parent="SceneObjects" unique_id=372625310]
 
-[node name="collectable2" parent="SceneObjects/Collactable Group" instance=ExtResource("5_l16n4")]
+[node name="collectable2" parent="SceneObjects/Collactable Group" unique_id=1486701369 instance=ExtResource("5_l16n4")]
 position = Vector2(1131, 595)
 
-[node name="collectable3" parent="SceneObjects/Collactable Group" instance=ExtResource("5_l16n4")]
+[node name="collectable3" parent="SceneObjects/Collactable Group" unique_id=1878302863 instance=ExtResource("5_l16n4")]
 position = Vector2(1769, 602)
 
-[node name="collectable" parent="SceneObjects/Collactable Group" instance=ExtResource("5_l16n4")]
+[node name="collectable" parent="SceneObjects/Collactable Group" unique_id=1734907230 instance=ExtResource("5_l16n4")]
 position = Vector2(629, 604)
 
-[node name="finish" parent="SceneObjects" instance=ExtResource("6_sf0ap")]
+[node name="finish" parent="SceneObjects" unique_id=2131302269 instance=ExtResource("6_sf0ap")]
 position = Vector2(2406, 569)
 target_level = ExtResource("7_xh1gu")
 
-[node name="Enemies" type="Node" parent="SceneObjects" groups=["enemies"]]
+[node name="Enemies" type="Node" parent="SceneObjects" unique_id=745505115 groups=["enemies"]]
 
-[node name="Enemy" parent="SceneObjects/Enemies" instance=ExtResource("8_nv15f")]
+[node name="Enemy" parent="SceneObjects/Enemies" unique_id=1651160204 instance=ExtResource("8_nv15f")]
 position = Vector2(835, 584)
 
-[node name="Enemy2" parent="SceneObjects/Enemies" instance=ExtResource("8_nv15f")]
+[node name="Enemy2" parent="SceneObjects/Enemies" unique_id=293059236 instance=ExtResource("8_nv15f")]
 position = Vector2(440, 586)
 
-[node name="Enemy3" parent="SceneObjects/Enemies" instance=ExtResource("8_nv15f")]
+[node name="Enemy3" parent="SceneObjects/Enemies" unique_id=1218947954 instance=ExtResource("8_nv15f")]
 position = Vector2(1339, 583)
 
-[node name="Area2D" type="Area2D" parent="SceneObjects"]
+[node name="Area2D" type="Area2D" parent="SceneObjects" unique_id=1883073685]
 position = Vector2(1669, 725)
 script = ExtResource("9_o6jv0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneObjects/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneObjects/Area2D" unique_id=1434712444]
 shape = SubResource("SegmentShape2D_j6i4b")
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="." unique_id=116927119]
 
-[node name="Panel" type="Panel" parent="UI"]
+[node name="Panel" type="Panel" parent="UI" unique_id=545888115]
 offset_right = 250.0
 offset_bottom = 72.0
 
-[node name="PointsLabel" type="Label" parent="UI/Panel"]
+[node name="PointsLabel" type="Label" parent="UI/Panel" unique_id=36904801]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -272,7 +272,7 @@ text = "Points : 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Hearts" type="Panel" parent="UI"]
+[node name="Hearts" type="Panel" parent="UI" unique_id=817293929]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -280,7 +280,7 @@ offset_left = -249.0
 offset_bottom = 72.0
 grow_horizontal = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI/Hearts"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Hearts" unique_id=51361939]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -294,28 +294,28 @@ offset_bottom = 33.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Heart" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
+[node name="Heart" type="TextureRect" parent="UI/Hearts/HBoxContainer" unique_id=427056141]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("9_pkc2w")
 expand_mode = 2
 
-[node name="Heart2" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
+[node name="Heart2" type="TextureRect" parent="UI/Hearts/HBoxContainer" unique_id=1126778933]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("9_pkc2w")
 expand_mode = 2
 
-[node name="Heart3" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
+[node name="Heart3" type="TextureRect" parent="UI/Hearts/HBoxContainer" unique_id=1263852127]
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("9_pkc2w")
 expand_mode = 2
 
-[node name="pause" type="Node" parent="UI"]
+[node name="pause" type="Node" parent="UI" unique_id=1801704915]
 script = ExtResource("10_aq6jl")
 
-[node name="PausePanel" type="Panel" parent="UI/pause"]
+[node name="PausePanel" type="Panel" parent="UI/pause" unique_id=116472899]
 unique_name_in_owner = true
 visible = false
 anchors_preset = 15
@@ -324,7 +324,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="UI/pause/PausePanel"]
+[node name="Label" type="Label" parent="UI/pause/PausePanel" unique_id=1024520570]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -341,7 +341,7 @@ theme_override_font_sizes/font_size = 50
 text = "GAME PAUSED"
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/pause/PausePanel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/pause/PausePanel" unique_id=578701656]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -356,12 +356,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
 
-[node name="Resume" type="Button" parent="UI/pause/PausePanel/VBoxContainer"]
+[node name="Resume" type="Button" parent="UI/pause/PausePanel/VBoxContainer" unique_id=387667462]
 process_mode = 3
 layout_mode = 2
 text = "RESUME"
 
-[node name="BackToMainMenu" type="Button" parent="UI/pause/PausePanel/VBoxContainer"]
+[node name="BackToMainMenu" type="Button" parent="UI/pause/PausePanel/VBoxContainer" unique_id=65054782]
 process_mode = 3
 layout_mode = 2
 text = "GO TO MAIN MENU"

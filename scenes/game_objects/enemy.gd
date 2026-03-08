@@ -1,23 +1,24 @@
 extends RigidBody2D
 
 @onready var game_manager: Node = %GameManager
+
 # Kecepatan gerakan musuh
 var speed: float = 100.0
+
 # Batas gerakan ke kiri dan kanan relatif terhadap posisi awal musuh
 var left_limit: float = -50.0
 var right_limit: float = 50.0
+
 # Menentukan arah awal gerakan musuh (1 untuk kanan, -1 untuk kiri)
 var direction: int = 1
+
 # Menyimpan posisi awal untuk referensi batas gerakan
 var start_position_x: float
 
-
-
-
 # Fungsi yang dipanggil saat node pertama kali masuk ke dalam scene tree
 func _ready() -> void:
-	start_position_x = position.x  # Simpan posisi X awal sebagai referensi
-	add_to_group("enemies")  # Tambahkan musuh ke grup "enemies"
+	start_position_x = position.x # Simpan posisi X awal sebagai referensi
+	add_to_group("enemies") # Tambahkan musuh ke grup "enemies"
 
 # Fungsi dipanggil setiap frame fisika untuk memperbarui posisi musuh
 func _physics_process(delta: float) -> void:
@@ -26,9 +27,9 @@ func _physics_process(delta: float) -> void:
 	
 	# Cek apakah musuh sudah mencapai batas kiri atau kanan relatif terhadap posisi awal
 	if position.x < start_position_x + left_limit:
-		direction = 1  # Ubah arah ke kanan
+		direction = 1 # Ubah arah ke kanan
 	elif position.x > start_position_x + right_limit:
-		direction = -1  # Ubah arah ke kiri
+		direction = -1 # Ubah arah ke kiri
 
 # Fungsi yang dipanggil ketika karakter pemain memasuki area musuh
 func _on_area_2d_body_entered(body: Node2D) -> void:
@@ -52,8 +53,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			else:
 				body.jump_side(-500)
 
-
-
 # Fungsi untuk memindahkan musuh ke arah tertentu
-func move_in_direction(direction: Vector2) -> void:
-	position += direction
+func move_in_direction(target_direction: Vector2) -> void:
+	position += target_direction

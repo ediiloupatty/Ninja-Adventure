@@ -1,44 +1,43 @@
 extends Node
 
+@export var hearts: Array[Node] # Daftar node hati yang merepresentasikan nyawa pemain
+
 @onready var points_label: Label = %PointsLabel
-@export var hearts: Array[Node]  # Daftar node hati yang merepresentasikan nyawa pemain
 
-var points = 0
-#terdapat 3 nyawa
-var lives = 3
+var points: int = 0
+var lives: int = 3 # Terdapat 3 nyawa
 
+# Fungsi untuk stop music ketika masuk ke dalam game
+func _ready() -> void:
+	AudioManagerGlobal.stop_music()
+	AudioManagerGlobal.play_bg()
+
+# Fungsi untuk menambah poin pemain
+func add_point() -> void:
+	points += 1
+	print("Points: ", points)
+	points_label.text = "Points : " + str(points)
 
 # Fungsi untuk mengurangi nyawa pemain
-func decrease_health():
+func decrease_health() -> void:
 	lives -= 1
-	print("Lives:", lives)
+	print("Lives: ", lives)
+	
 	# Perbarui tampilan hati sesuai dengan nyawa yang tersisa
 	for h in range(hearts.size()):
 		if h < lives:
-			hearts[h].show()  # Tampilkan hati jika pemain masih memiliki nyawa
+			hearts[h].show() # Tampilkan hati jika pemain masih memiliki nyawa
 		else:
-			hearts[h].hide()  # Sembunyikan hati jika nyawa berkurang
+			hearts[h].hide() # Sembunyikan hati jika nyawa berkurang
 	
-	# Jika nyawa habis, ulangi scene saat ini
+	# Jika nyawa habis, ganti scene ke main menu
 	if lives <= 0:
-		#code sebelumnya
-		#get_tree().reload_current_scene()
-		#code di ganti ke main menu
 		get_tree().change_scene_to_file("res://scenes/menu/main_menu.tscn")
 
-
-# Fungsi untuk menambah poin pemain
-func add_point():
-	points += 1
-	print("Points:", points)
-	points_label.text = "Points : " + str(points)
-
-
-
 # Fungsi untuk menghapus semua musuh dari scene
-func remove_all_enemies():
+func remove_all_enemies() -> void:
 	get_tree().call_group("enemies", "queue_free")
 
 # Fungsi untuk memindahkan semua musuh ke arah tertentu
-func move_all_enemies(direction: Vector2):
+func move_all_enemies(direction: Vector2) -> void:
 	get_tree().call_group("enemies", "move_in_direction", direction)

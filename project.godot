@@ -30,7 +30,7 @@ window/stretch/aspect="ignore"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/gdss/plugin.cfg")
+enabled=PackedStringArray()
 
 [gdss]
 
