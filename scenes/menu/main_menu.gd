@@ -1,7 +1,8 @@
 extends Node
 
 func _ready() -> void:
-	AudioManagerGlobal.play_music()
+	AudioManagerGlobal.stop_bg()   # pastikan musik level berhenti
+	AudioManagerGlobal.play_music() # jalankan musik menu
 	
 func _on_level_1_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/level1.tscn")

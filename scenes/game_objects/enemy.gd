@@ -40,6 +40,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 		# Jika karakter utama berada di atas musuh, musuh mati
 		if y_delta > 30:
+			AudioManagerGlobal.play_stom_anemy()
 			print("Membunuh Musuh")
 			queue_free()
 		else:

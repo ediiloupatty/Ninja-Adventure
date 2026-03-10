@@ -8,14 +8,16 @@ var audio_3: AudioStream = preload("res://assets/sfx/background_in_game/audio_3.
 var step_1: AudioStream = preload("res://assets/sfx/Steps_tiles-001.ogg")
 var step_2: AudioStream = preload("res://assets/sfx/Steps_tiles-002.ogg")
 
-var success_audio: AudioStream = preload("res://assets/sfx/success.mp3")
+var success_audio: AudioStream = preload("res://assets/sfx/success.ogg")
 var item: AudioStream = preload("res://assets/sfx/collected_item/Item_collected_2.ogg")
+var stom_anemy: AudioStream = preload("res://assets/sfx/stomp_anemy.ogg")
 
 # Node pemutar suara permanen
 var sfx_item_player := AudioStreamPlayer.new()
 var sfx_footstep_player := AudioStreamPlayer.new()
 var sfx_success_player := AudioStreamPlayer.new()
 var bg_audios := AudioStreamPlayer.new()
+var sfx_stom_anemy := AudioStreamPlayer.new()
 
 func _ready() -> void:
 	# BGM utama
@@ -27,11 +29,13 @@ func _ready() -> void:
 	add_child(sfx_footstep_player)
 	add_child(sfx_success_player)
 	add_child(bg_audios)
+	add_child(sfx_stom_anemy)
 	
 	# Atur volume untuk masing-masing SFX (Gunakan angka minus agar pelan)
 	sfx_item_player.volume_db = -8.0     # Mengecilkan suara item
 	sfx_footstep_player.volume_db = -12.0 # Mengecilkan suara langkah kaki
 	bg_audios.volume_db = -40.0
+	sfx_stom_anemy.volume_db = -30
 
 func play_music() -> void:
 	if not playing:
@@ -46,6 +50,11 @@ func play_bg() -> void:
 	bg_audios.stream = audios[randi() % audios.size()]
 	bg_audios.play()
 
+func stop_bg() -> void:
+	print("Audio background utama Mati")
+	if bg_audios.playing:
+		bg_audios.stop()
+
 func play_footstep() -> void:
 	var steps: Array[AudioStream] = [step_1, step_2]
 	sfx_footstep_player.stream = steps[randi() % steps.size()]
@@ -56,9 +65,14 @@ func play_item_collected() -> void:
 	var items_sfx: Array[AudioStream] = [item]
 	sfx_item_player.stream = items_sfx[randi() % items_sfx.size()]
 	sfx_item_player.play()
-
+	
+func play_stom_anemy()-> void:
+	print("menjalankan suara stom anemy")
+	sfx_stom_anemy.stream = stom_anemy
+	sfx_stom_anemy.play()
+	
 func music_success() -> void:
 	print("Audio Success")
-	await get_tree().create_timer(1.0).timeout # Fixed timer, previous was -10 which is invalid
+	await get_tree().create_timer(-10).timeout # Fixed timer, previous was -10 which is invalid
 	sfx_success_player.stream = success_audio
 	sfx_success_player.play()
