@@ -11,6 +11,7 @@ var lives: int = 3 # Terdapat 3 nyawa
 func _ready() -> void:
 	AudioManagerGlobal.stop_music()
 	AudioManagerGlobal.play_bg()
+	
 
 # Fungsi untuk menambah poin pemain
 func add_point() -> void:
