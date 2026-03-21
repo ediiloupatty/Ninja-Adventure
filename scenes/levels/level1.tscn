@@ -362,12 +362,6 @@ text = "Points : 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DigitContainer" type="HBoxContainer" parent="UI/Panel" unique_id=1551904496]
-unique_name_in_owner = true
-layout_mode = 0
-offset_right = 249.0
-offset_bottom = 72.0
-
 [node name="Hearts" type="Panel" parent="UI" unique_id=1072524486]
 anchors_preset = 1
 anchor_left = 1.0

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bnqvtbfop4p1r"]
+
+[ext_resource type="Script" uid="uid://trrd77hdm1nn" path="res://scenes/Input/input_name.gd" id="1_lfvob"]
+
+[node name="InputName" type="Node2D" unique_id=780314940]
+script = ExtResource("1_lfvob")
+
+[node name="Control" type="Control" parent="." unique_id=668807390]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=252742591]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer" unique_id=571902697]
+layout_mode = 2
+text = "Input nama :"
+
+[node name="NameInput" type="LineEdit" parent="Control/VBoxContainer" unique_id=1793271964]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Control/VBoxContainer" unique_id=7228232]
+layout_mode = 2
+text = "Lanjutkan"
+
+[connection signal="pressed" from="Control/VBoxContainer/Button" to="." method="_on_button_pressed"]

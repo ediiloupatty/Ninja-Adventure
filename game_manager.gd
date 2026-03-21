@@ -2,7 +2,7 @@ extends Node
 
 @export var hearts: Array[Node] # Daftar node hati yang merepresentasikan nyawa pemain
 
-@onready var points_label: Label = %PointsLabel
+@onready var points_ui = %PointsLabel
 
 var points: int = 0
 var lives: int = 3 # Terdapat 3 nyawa
@@ -17,7 +17,11 @@ func _ready() -> void:
 func add_point() -> void:
 	points += 1
 	print("Points: ", points)
-	points_label.text = "Points : " + str(points)
+	
+	if points_ui.has_method("update_score"):
+		points_ui.update_score(points)
+	elif points_ui is Label:
+		points_ui.text = "Points : " + str(points)
 
 # Fungsi untuk mengurangi nyawa pemain
 func decrease_health() -> void:
