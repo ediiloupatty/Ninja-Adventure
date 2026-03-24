@@ -23,6 +23,7 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 AudioManagerGlobal="*uid://bm0mp1a6di40l"
 GdssRuntime="*uid://yu6lhnx763yp"
 Global="*uid://c8nlfet7vs4lt"
+GameManager="*uid://brmjtsbm2p88t"
 
 [display]
 

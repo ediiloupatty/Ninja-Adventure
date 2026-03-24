@@ -7,7 +7,7 @@
 ## Fitur Permainan
 
 - **Pergerakan Karakter Utama**: Ninja dapat berjalan ke kiri maupun ke kanan, serta melompat. Animasi dinamis mengikuti status pemain (diam, berlari, atau melompat di udara).
-- **Sistem Nyawa (Health System)**: Pemain dibekali 3 nyawa (Health) yang ditandai dengan ikon hati. Jika tersentuh musuh secara tidak tepat, nyawa akan berkurang. Apabila nyawa habis (0), permainan akan dikembalikan ke Main Menu.
+- **Sistem Nyawa & Checkpoint**: Pemain dibekali 3 nyawa (Health) yang ditandai dengan ikon hati. Jika tersentuh musuh secara tidak tepat, karakter akan terpental dan nyawa berkurang. Terdapat area Checkpoint untuk menyimpan progress. Apabila seluruh nyawa habis (0), pemain akan kembali hidup di Checkpoint terakhir dengan nyawa penuh (3) daripada mengulang dari awal permainan.
 - **Mengalahkan Musuh (Combat System)**: Musuh akan bergerak berpatroli ke rute tertentu. Pemain dapat membunuh musuh dengan cara yang klasik: **melompat dan mendarat tepat di atasnya**.
 - **Sistem Poin (Collectables)**: Terdapat item di sepanjang jalan yang jika diambil akan menambah skor poin bagi pemain.
 - **Multilevel**: Proyek ini diatur ke dalam beberapa desain level (`level1`, `level2`, dll) dengan pintu akhir (`finish`) di penghujung area.
@@ -42,3 +42,5 @@
 
 ---
 *Dikembangkan dengan menggunakan Godot Engine.* 
+
+<!-- untuk commit ke github -->
